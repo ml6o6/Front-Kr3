@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Проекты — Front Ilja</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <a class="skip-link" href="#main-content"
+      >Перейти к основному содержимому</a
+    >
+    <header class="site-header bg-primary text-white py-3">
+      <div
+        class="container d-flex flex-wrap justify-content-between align-items-center gap-3"
+      >
+        <h1 class="h4 mb-0">Мои проекты</h1>
+        <button
+          id="theme-toggle"
+          class="btn btn-light text-primary fw-semibold"
+        >
+          Смена темы
+        </button>
+      </div>
+    </header>
+
+    <nav
+      class="site-nav navbar navbar-expand-lg navbar-dark bg-dark"
+      aria-label="Основная навигация"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <i class="bi bi-code-slash"></i> <span>Frontend</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+          aria-controls="nav"
+          aria-expanded="false"
+          aria-label="Открыть меню навигации"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                ><i class="bi bi-house me-1"></i>Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="projects.html"
+                ><i class="bi bi-kanban me-1"></i>Проекты</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="diary.html"
+                ><i class="bi bi-journal-text me-1"></i>Дневник</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html"
+                ><i class="bi bi-telephone me-1"></i>Контакты</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content" class="container my-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Проекты</li>
+        </ol>
+      </nav>
+
+      <section>
+        <div class="projects-grid">
+          <!-- Карточка 1 -->
+          <div
+            class="card h-100 shadow-sm"
+            role="button"
+            tabindex="0"
+            aria-label="Открыть проект: Портфолио студента"
+            data-bs-toggle="modal"
+            data-bs-target="#proj1"
+          >
+            <picture>
+              <img
+                src="assets/images/project1.png"
+                srcset="assets/images/project1.png 600w"
+                sizes="(min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                width="600"
+                height="338"
+                class="card-img-top"
+                loading="lazy"
+                decoding="async"
+                alt="Превью проекта портфолио студента"
+              />
+            </picture>
+
+            <div class="card-body">
+              <h2 class="card-title h5">Портфолио студента</h2>
+              <p class="card-text">
+                Адаптивный сайт портфолио с несколькими страницами, навигацией и
+                контактной формой.
+              </p>
+              <ul class="small mb-0">
+                <li>Главная, проекты, дневник, контакты</li>
+                <li>Темная/светлая тема</li>
+              </ul>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <span class="badge text-bg-primary">HTML/CSS</span>
+              <span class="badge text-bg-secondary">Bootstrap</span>
+            </div>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div
+            class="card h-100 shadow-sm"
+            role="button"
+            tabindex="0"
+            aria-label="Открыть проект: Todo-приложение"
+            data-bs-toggle="modal"
+            data-bs-target="#proj2"
+          >
+            <picture>
+              <img
+                src="assets/images/project2.png"
+                srcset="assets/images/project2.png 600w"
+                sizes="(min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                width="600"
+                height="338"
+                class="card-img-top"
+                loading="lazy"
+                decoding="async"
+                alt="Превью проекта портфолио студента"
+              />
+            </picture>
+
+            <div class="card-body">
+              <h2 class="card-title h5">Todo-приложение</h2>
+              <p class="card-text">
+                Простое приложение для управления задачами с возможностью
+                отмечать выполненные дела.
+              </p>
+              <ul class="small mb-0">
+                <li>Добавление и удаление задач</li>
+                <li>Отметка выполненных дел</li>
+                <li>Фильтрация по статусу</li>
+              </ul>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <span class="badge text-bg-success">JavaScript</span>
+              <span class="badge text-bg-secondary">UI/UX</span>
+            </div>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div
+            class="card h-100 shadow-sm"
+            role="button"
+            tabindex="0"
+            aria-label="Открыть проект: Страница статьи"
+            data-bs-toggle="modal"
+            data-bs-target="#proj3"
+          >
+            <picture>
+              <img
+                src="assets/images/project3.png"
+                srcset="assets/images/project3.png 600w"
+                sizes="(min-width: 992px) 33vw, (min-width: 576px) 50vw, 100vw"
+                width="600"
+                height="338"
+                class="card-img-top"
+                loading="lazy"
+                decoding="async"
+                alt="Превью проекта портфолио студента"
+              />
+            </picture>
+
+            <div class="card-body">
+              <h2 class="card-title h5">Страница статьи</h2>
+              <p class="card-text">
+                Адаптивная страница статьи с подзаголовками, списками и
+                оформленным текстом.
+              </p>
+              <ul class="small mb-0">
+                <li>Семантическая разметка</li>
+                <li>Адаптивные изображения</li>
+                <li>Удобное чтение на мобильных</li>
+              </ul>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+              <span class="badge text-bg-info">Контент</span>
+              <span class="badge text-bg-secondary">Верстка</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="modal fade"
+        id="proj1"
+        tabindex="-1"
+        aria-labelledby="proj1Label"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title h5" id="proj1Label">Портфолио студента</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Закрыть"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Портфолио студента — учебный проект, в котором реализованы
+                несколько страниц, навигация и контактная форма.
+              </p>
+              <ul>
+                <li>Главная страница с краткой информацией</li>
+                <li>Страница проектов с модальными окнами</li>
+                <li>Дневник обучения</li>
+                <li>Контактная форма</li>
+              </ul>
+              <p>
+                Проект показывает умение работать с Bootstrap 5, сетками,
+                карточками и модальными окнами.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="proj2"
+        tabindex="-1"
+        aria-labelledby="proj2Label"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title h5" id="proj2Label">Todo-приложение</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Закрыть"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Todo-приложение — это учебный проект для отработки работы с
+                JavaScript, DOM и обработкой событий.
+              </p>
+              <ul>
+                <li>Добавление новых задач</li>
+                <li>Отметка выполненных задач</li>
+                <li>Удаление ненужных задач</li>
+                <li>Фильтрация списка по статусу</li>
+              </ul>
+              <p>
+                Основной упор сделан на простоту интерфейса и понятную логику
+                работы.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="proj3"
+        tabindex="-1"
+        aria-labelledby="proj3Label"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title h5" id="proj3Label">Страница статьи</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Закрыть"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Страница статьи — это пример аккуратной типографики и
+                семантической верстки.
+              </p>
+              <ul>
+                <li>Использование заголовков разных уровней</li>
+                <li>Списки, выделения и цитаты</li>
+                <li>Адаптивные изображения</li>
+              </ul>
+              <p>
+                Проект демонстрирует умение работать с текстом и оформлением
+                контента в вебе.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto w-100">
+      <div
+        class="container-fluid d-flex flex-wrap justify-content-between align-items-center gap-3 px-3"
+      >
+        <p class="mb-0">&copy; 2025 Front Ilja. Все права защищены.</p>
+        <p class="mb-0">
+          Телефон:
+          <a class="link-light text-decoration-none" href="tel:+79853540661"
+            >+7 (985) 354-06-61</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
